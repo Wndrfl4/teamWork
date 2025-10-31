@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Team Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Редактор сайта</h1>
+  <textarea id="htmlArea" rows="15">
+<h2>Добро пожаловать!</h2>
+<p>Это наш командный сайт.</p>
+  </textarea>
+  <br>
+  <button id="saveBtn">Сохранить и закоммитить</button>
+  <p id="status"></p>
+  <script src="app.js"></script>
+</body>
+</html>

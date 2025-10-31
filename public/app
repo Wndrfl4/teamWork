@@ -1,0 +1,26 @@
+document.getElementById("saveBtn").addEventListener("click", async () => {
+  const html = document.getElementById("htmlArea").value;
+  const status = document.getElementById("status");
+
+  status.textContent = "⏳ Сохраняем...";
+  try {
+    const res = await fetch("/commit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        path: "index.html",
+        content: html,
+        message: "Обновление сайта через Team Editor",
+      }),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      status.textContent = `✅ Коммит создан: ${data.commit}`;
+    } else {
+      status.textContent = `⚠️ Ошибка: ${data.error}`;
+    }
+  } catch (e) {
+    status.textContent = "❌ Ошибка сети или сервера";
+  }
+});

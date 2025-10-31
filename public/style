@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0e1628;
+  color: white;
+  padding: 30px;
+}
+textarea {
+  width: 100%;
+  font-size: 16px;
+  background: #111b33;
+  color: #cde;
+  border: 1px solid #334;
+  border-radius: 8px;
+  padding: 10px;
+}
+button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #1f6feb;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background: #3382ff;
+}
+#status {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #8fd;
+}
